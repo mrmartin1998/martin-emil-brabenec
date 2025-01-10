@@ -22,7 +22,7 @@
 ### Frontend
 - [x] Create basic layout components
   - [x] Navigation
-  - [ ] Footer
+  - [x] Footer
   - [x] Layout wrapper
 - [ ] Implement responsive design
 - [ ] Create main pages
