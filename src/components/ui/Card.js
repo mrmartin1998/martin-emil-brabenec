@@ -1,3 +1,5 @@
+'use client';
+import { useState } from 'react';
 import Image from 'next/image';
 import Button from './Button';
 
@@ -9,18 +11,19 @@ export default function Card({
   links = [],
   className = '' 
 }) {
+  const [imgError, setImgError] = useState(false);
+
   return (
-    <div className={`card bg-base-100 shadow-xl ${className}`}>
-      {image && (
-        <figure className="relative h-48 md:h-64">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-cover"
-          />
-        </figure>
-      )}
+    <div className={`card bg-base-100 shadow-xl hover-lift transition-all duration-300 ${className}`}>
+      <figure className="relative h-48 md:h-64">
+        <Image
+          src={imgError ? "/images/placeholder.jpg" : image}
+          alt={title}
+          fill
+          className="object-cover"
+          onError={() => setImgError(true)}
+        />
+      </figure>
       <div className="card-body">
         <h3 className="card-title">{title}</h3>
         <p className="text-base-content/70">{description}</p>

@@ -10,7 +10,7 @@ export default function ProjectGrid() {
     {
       title: "Project One",
       description: "A modern web application built with Next.js and TailwindCSS.",
-      image: "/projects/project1.jpg",
+      image: "/images/projects/project1.jpg",
       tags: ["React", "Next.js", "Tailwind"],
       category: "web",
       links: [
@@ -21,7 +21,7 @@ export default function ProjectGrid() {
     {
       title: "Project Two",
       description: "Mobile-first e-commerce platform with real-time updates.",
-      image: "/projects/project2.jpg",
+      image: "/images/projects/project2.jpg",
       tags: ["React Native", "Firebase", "Redux"],
       category: "mobile",
       links: [

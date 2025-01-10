@@ -70,8 +70,8 @@
     - [x] src/app/globals.css (page-specific styles)
     - [x] src/app/layout.js (metadata for each page)
 
-- [ ] Add animations and transitions
-- [ ] Implement dark/light mode
+- [x] Add animations and transitions
+- [x] Implement dark/light mode
 
 ### Backend
 - [ ] Set up MongoDB connection

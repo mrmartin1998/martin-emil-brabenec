@@ -6,7 +6,7 @@ export default function FeaturedProjects() {
     {
       title: "Project One",
       description: "A brief description of the project and its key features.",
-      image: "/projects/project1.jpg",
+      image: "/images/projects/project1.jpg",
       tags: ["React", "Next.js", "Tailwind"],
       links: [
         { label: "View Project", href: "/projects/project-one" },
