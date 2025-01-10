@@ -20,10 +20,10 @@
 
 ## Phase 3: Core Development
 ### Frontend
-- [ ] Create basic layout components
-  - Navigation
-  - Footer
-  - Layout wrapper
+- [x] Create basic layout components
+  - [x] Navigation
+  - [ ] Footer
+  - [x] Layout wrapper
 - [ ] Implement responsive design
 - [ ] Create main pages
   - Home page
