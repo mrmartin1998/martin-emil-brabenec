@@ -13,7 +13,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 sticky top-0 z-50 shadow-sm px-4 sm:px-6 lg:px-8">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,7 +26,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link 
                   href={link.href}
-                  className={pathname === link.href ? 'active' : ''}
+                  className={`mobile-nav-link ${pathname === link.href ? 'active font-medium' : ''}`}
                 >
                   {link.label}
                 </Link>
@@ -34,7 +34,7 @@ export default function Navbar() {
             ))}
           </ul>
         </div>
-        <Link href="/" className="btn btn-ghost text-xl">Martin Emil</Link>
+        <Link href="/" className="btn btn-ghost text-lg sm:text-xl font-bold">Martin Emil</Link>
       </div>
       
       <div className="navbar-center hidden lg:flex">
@@ -43,7 +43,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link 
                 href={link.href}
-                className={pathname === link.href ? 'active' : ''}
+                className={`nav-link ${pathname === link.href ? 'active font-medium' : ''}`}
               >
                 {link.label}
               </Link>

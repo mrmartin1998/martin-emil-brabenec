@@ -30,19 +30,19 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
-      <nav className="grid grid-flow-col gap-4">
+    <footer className="footer footer-center p-6 sm:p-8 md:p-10 bg-base-200 text-base-content">
+      <nav className="grid grid-flow-row sm:grid-flow-col gap-4 mb-4">
         {footerLinks.map((link) => (
           <Link 
             key={link.href}
             href={link.href}
-            className="link link-hover"
+            className="link link-hover text-sm sm:text-base"
           >
             {link.label}
           </Link>
         ))}
       </nav>
-      <nav>
+      <nav className="mb-4">
         <div className="grid grid-flow-col gap-4">
           {socialLinks.map((link) => (
             <a
@@ -50,7 +50,7 @@ export default function Footer() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-ghost btn-circle"
+              className="btn btn-ghost btn-circle hover:scale-110 transition-transform duration-200"
               aria-label={link.label}
             >
               {link.icon}
@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
       </nav>
       <aside>
-        <p className="text-sm">
+        <p className="text-xs sm:text-sm text-center">
           Copyright © {currentYear} - Martin Emil Brabenec. All rights reserved.
         </p>
       </aside>

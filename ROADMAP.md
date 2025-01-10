@@ -24,7 +24,7 @@
   - [x] Navigation
   - [x] Footer
   - [x] Layout wrapper
-- [ ] Implement responsive design
+- [x] Implement responsive design
 - [ ] Create main pages
   - Home page
   - Projects page
