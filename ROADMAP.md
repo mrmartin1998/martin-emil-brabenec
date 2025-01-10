@@ -1,23 +1,22 @@
 # Portfolio Website Development Roadmap
 
 ## Phase 1: Design & Planning
-- [ ] Define website sections
+- [x] Define website sections
   - Home/Hero section
   - About Me
   - Skills/Tech Stack
   - Projects Portfolio
   - Contact Section
-- [ ] Create wireframes/mockups
-- [ ] Plan color scheme and typography
-- [ ] Define responsive design breakpoints
+- [x] Plan color scheme and typography
+- [x] Define responsive design breakpoints
 
 ## Phase 2: Project Setup & Configuration
 - [x] Initialize Next.js project
 - [x] Install and configure Tailwind CSS
 - [x] Install and configure DaisyUI
-- [ ] Set up MongoDB Atlas
-- [ ] Configure environment variables
-- [ ] Set up project structure and folders
+- [x] Set up MongoDB Atlas
+- [x] Configure environment variables
+- [x] Set up project structure and folders
 
 ## Phase 3: Core Development
 ### Frontend
