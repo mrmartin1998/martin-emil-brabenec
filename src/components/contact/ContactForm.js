@@ -78,9 +78,10 @@ export default function ContactForm() {
           type="text"
           id="name"
           name="name"
+          placeholder="Your name"
           value={formData.name}
           onChange={handleChange}
-          className={`input input-bordered w-full ${errors.name ? 'input-error' : ''}`}
+          className={`input input-bordered w-full rounded-xl ${errors.name ? 'input-error' : ''}`}
           disabled={status === 'loading'}
         />
         {errors.name && (
@@ -96,9 +97,10 @@ export default function ContactForm() {
           type="email"
           id="email"
           name="email"
+          placeholder="Your email"
           value={formData.email}
           onChange={handleChange}
-          className={`input input-bordered w-full ${errors.email ? 'input-error' : ''}`}
+          className={`input input-bordered w-full rounded-xl ${errors.email ? 'input-error' : ''}`}
           disabled={status === 'loading'}
         />
         {errors.email && (
@@ -114,9 +116,10 @@ export default function ContactForm() {
           type="text"
           id="subject"
           name="subject"
+          placeholder="Subject"
           value={formData.subject}
           onChange={handleChange}
-          className={`input input-bordered w-full ${errors.subject ? 'input-error' : ''}`}
+          className={`input input-bordered w-full rounded-xl ${errors.subject ? 'input-error' : ''}`}
           disabled={status === 'loading'}
         />
         {errors.subject && (
@@ -131,9 +134,10 @@ export default function ContactForm() {
         <textarea
           id="message"
           name="message"
+          placeholder="Your message"
           value={formData.message}
           onChange={handleChange}
-          className={`textarea textarea-bordered h-32 ${errors.message ? 'textarea-error' : ''}`}
+          className={`textarea textarea-bordered w-full h-32 rounded-xl ${errors.message ? 'textarea-error' : ''}`}
           disabled={status === 'loading'}
         />
         {errors.message && (
@@ -145,7 +149,7 @@ export default function ContactForm() {
         <Button
           type="submit"
           disabled={status === 'loading'}
-          className="w-full md:w-auto"
+          className="btn btn-primary rounded-xl"
         >
           {status === 'loading' ? (
             <span className="loading loading-spinner loading-sm"></span>

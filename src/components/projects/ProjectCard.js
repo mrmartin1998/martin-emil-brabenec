@@ -16,13 +16,13 @@ export default function ProjectCard({
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div className={`card bg-base-100 shadow-xl hover-lift transition-all duration-300 ${className}`}>
-      <figure className="relative h-48 md:h-64">
+    <div className={`card bg-base-100 shadow-xl hover-lift transition-all duration-300 rounded-2xl ${className}`}>
+      <figure className="relative h-48 md:h-64 rounded-t-2xl">
         <Image
           src={imgError ? "/images/placeholder.jpg" : image}
           alt={title}
           fill
-          className="object-cover"
+          className="object-cover rounded-t-2xl"
           onError={() => setImgError(true)}
         />
       </figure>

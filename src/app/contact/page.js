@@ -33,12 +33,12 @@ export default function ContactPage() {
   return (
     <>
       <PageHeader
-        title="Get in Touch"
-        subtitle="Have a question or want to work together? I'd love to hear from you."
+        title="Contact"
+        subtitle="Get in touch with me for collaboration, opportunities, or just to say hello."
       />
 
-      <Section className="bg-base-200">
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <Section className="bg-base-200 rounded-3xl">
+        <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
             <div className="space-y-6">

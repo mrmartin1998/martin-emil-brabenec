@@ -39,7 +39,7 @@ export default function SkillsGrid() {
       {skills.map((category) => (
         <div
           key={category.category}
-          className="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300"
+          className="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-2xl"
         >
           <div className="card-body">
             <h3 className="card-title mb-6">{category.category}</h3>

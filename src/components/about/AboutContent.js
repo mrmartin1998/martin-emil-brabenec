@@ -22,7 +22,7 @@ export default function AboutContent() {
 
   return (
     <>
-      <Section className="bg-base-200">
+      <Section className="bg-base-200 rounded-3xl">
         <div className="max-w-3xl mx-auto">
           <h2 className="mb-6">About Me</h2>
           <div className="prose prose-lg max-w-none">
@@ -49,13 +49,13 @@ export default function AboutContent() {
         <SkillsGrid />
       </Section>
 
-      <Section className="bg-base-200">
+      <Section className="bg-base-200 rounded-3xl">
         <h2 className="text-center mb-12">Experience</h2>
         <div className="max-w-3xl mx-auto">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="mb-8 last:mb-0 card bg-base-100 shadow-xl"
+              className="mb-8 last:mb-0 card bg-base-100 shadow-xl rounded-2xl"
             >
               <div className="card-body">
                 <h3 className="card-title">{exp.title}</h3>
