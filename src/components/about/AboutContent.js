@@ -1,5 +1,7 @@
 import Section from '@/components/ui/Section';
 import Button from '@/components/ui/Button';
+import SkillsGrid from '@/components/skills/SkillsGrid';
+import ResumeButton from '@/components/ui/ResumeButton';
 
 export default function AboutContent() {
   const skills = [
@@ -35,30 +37,16 @@ export default function AboutContent() {
               following best practices in software development.
             </p>
           </div>
-          <div className="mt-8">
+          <div className="mt-8 flex gap-4">
             <Button href="/contact">Get in Touch</Button>
+            <ResumeButton />
           </div>
         </div>
       </Section>
 
       <Section>
         <h2 className="text-center mb-12">Skills & Expertise</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {skills.map((skill) => (
-            <div key={skill.category} className="card bg-base-100 shadow-xl">
-              <div className="card-body">
-                <h3 className="card-title mb-4">{skill.category}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {skill.items.map((item) => (
-                    <span key={item} className="badge badge-primary badge-outline">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <SkillsGrid />
       </Section>
 
       <Section className="bg-base-200">

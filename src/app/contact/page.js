@@ -1,6 +1,7 @@
 import PageHeader from '@/components/ui/PageHeader';
 import Section from '@/components/ui/Section';
 import ContactForm from '@/components/contact/ContactForm';
+import SocialIcon from '@/components/ui/SocialIcon';
 
 export const metadata = {
   title: 'Contact | Martin Emil Brabenec',
@@ -66,6 +67,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 hover:text-primary transition-colors"
                     >
+                      <SocialIcon name={link.icon} />
                       <span className="text-base-content/70">{link.username}</span>
                     </a>
                   ))}

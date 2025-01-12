@@ -1,42 +1,75 @@
 'use client';
 import { useState } from 'react';
 import Button from '@/components/ui/Button';
+import { validateContact } from '@/lib/validations/contact';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
-    message: '',
+    message: ''
   });
-  const [status, setStatus] = useState({ type: '', message: '' });
+  
+  const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState('idle'); // idle, loading, success, error
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus({ type: 'loading', message: 'Sending message...' });
+    
+    // Validate form
+    const validation = validateContact(formData);
+    if (!validation.isValid) {
+      setErrors(validation.errors);
+      return;
+    }
+
+    setStatus('loading');
 
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) throw new Error('Failed to send message');
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
 
-      setStatus({ type: 'success', message: 'Message sent successfully!' });
+      setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
+      
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setStatus('idle');
+      }, 3000);
+
     } catch (error) {
-      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+      console.error('Failed to send message:', error);
+      setStatus('error');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto">
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div className="form-control">
         <label className="label" htmlFor="name">
           <span className="label-text">Name</span>
@@ -47,9 +80,12 @@ export default function ContactForm() {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className="input input-bordered w-full"
-          required
+          className={`input input-bordered w-full ${errors.name ? 'input-error' : ''}`}
+          disabled={status === 'loading'}
         />
+        {errors.name && (
+          <span className="text-error text-sm mt-1">{errors.name}</span>
+        )}
       </div>
 
       <div className="form-control">
@@ -62,9 +98,12 @@ export default function ContactForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className="input input-bordered w-full"
-          required
+          className={`input input-bordered w-full ${errors.email ? 'input-error' : ''}`}
+          disabled={status === 'loading'}
         />
+        {errors.email && (
+          <span className="text-error text-sm mt-1">{errors.email}</span>
+        )}
       </div>
 
       <div className="form-control">
@@ -77,9 +116,12 @@ export default function ContactForm() {
           name="subject"
           value={formData.subject}
           onChange={handleChange}
-          className="input input-bordered w-full"
-          required
+          className={`input input-bordered w-full ${errors.subject ? 'input-error' : ''}`}
+          disabled={status === 'loading'}
         />
+        {errors.subject && (
+          <span className="text-error text-sm mt-1">{errors.subject}</span>
+        )}
       </div>
 
       <div className="form-control">
@@ -91,20 +133,32 @@ export default function ContactForm() {
           name="message"
           value={formData.message}
           onChange={handleChange}
-          className="textarea textarea-bordered h-32"
-          required
+          className={`textarea textarea-bordered h-32 ${errors.message ? 'textarea-error' : ''}`}
+          disabled={status === 'loading'}
         />
+        {errors.message && (
+          <span className="text-error text-sm mt-1">{errors.message}</span>
+        )}
       </div>
 
-      <Button type="submit" className="w-full" disabled={status.type === 'loading'}>
-        {status.type === 'loading' ? 'Sending...' : 'Send Message'}
-      </Button>
+      <div className="flex items-center gap-4">
+        <Button
+          type="submit"
+          disabled={status === 'loading'}
+          className="w-full md:w-auto"
+        >
+          {status === 'loading' ? (
+            <span className="loading loading-spinner loading-sm"></span>
+          ) : 'Send Message'}
+        </Button>
 
-      {status.message && (
-        <div className={`alert ${status.type === 'success' ? 'alert-success' : 'alert-error'}`}>
-          <span>{status.message}</span>
-        </div>
-      )}
+        {status === 'success' && (
+          <span className="text-success">Message sent successfully!</span>
+        )}
+        {status === 'error' && (
+          <span className="text-error">Failed to send message. Please try again.</span>
+        )}
+      </div>
     </form>
   );
 } 

@@ -1,37 +1,14 @@
 'use client';
 import { useState } from 'react';
-import Card from '@/components/ui/Card';
+import ProjectCard from './ProjectCard';
+import ProjectModal from './ProjectModal';
 import Section from '@/components/ui/Section';
+import { projects } from '@/data/projects';
 
 export default function ProjectGrid() {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [selectedProject, setSelectedProject] = useState(null);
   
-  const projects = [
-    {
-      title: "Project One",
-      description: "A modern web application built with Next.js and TailwindCSS.",
-      image: "/images/projects/project1.jpg",
-      tags: ["React", "Next.js", "Tailwind"],
-      category: "web",
-      links: [
-        { label: "View Live", href: "https://project-one.com" },
-        { label: "GitHub", href: "https://github.com/username/project-one", variant: "outline" }
-      ]
-    },
-    {
-      title: "Project Two",
-      description: "Mobile-first e-commerce platform with real-time updates.",
-      image: "/images/projects/project2.jpg",
-      tags: ["React Native", "Firebase", "Redux"],
-      category: "mobile",
-      links: [
-        { label: "Case Study", href: "/projects/project-two" },
-        { label: "GitHub", href: "https://github.com/username/project-two", variant: "outline" }
-      ]
-    },
-    // Add more projects...
-  ];
-
   const filters = [
     { label: 'All', value: 'all' },
     { label: 'Web', value: 'web' },
@@ -62,11 +39,11 @@ export default function ProjectGrid() {
       </div>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {filteredProjects.map((project, index) => (
-          <Card
-            key={index}
+        {filteredProjects.map((project) => (
+          <ProjectCard
+            key={project.id}
             {...project}
-            className="transform transition-all hover:scale-[1.02]"
+            onClick={() => setSelectedProject(project)}
           />
         ))}
       </div>
@@ -75,6 +52,13 @@ export default function ProjectGrid() {
         <div className="text-center py-12">
           <p className="text-base-content/70">No projects found in this category.</p>
         </div>
+      )}
+
+      {selectedProject && (
+        <ProjectModal 
+          project={selectedProject} 
+          onClose={() => setSelectedProject(null)} 
+        />
       )}
     </Section>
   );
