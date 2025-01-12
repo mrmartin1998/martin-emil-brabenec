@@ -91,7 +91,7 @@
 - [x] Implement contact form
 - [x] Add social media links
 - [x] Create skills visualization
-- [ ] Add downloadable resume option
+- [x] Add downloadable resume option
 
 ## Phase 5: Performance & SEO
 - [ ] Optimize images
