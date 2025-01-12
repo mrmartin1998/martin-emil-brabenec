@@ -27,7 +27,7 @@ export default function AboutContent() {
           <h2 className="mb-6">About Me</h2>
           <div className="prose prose-lg max-w-none">
             <p>
-              I'm a full-stack developer with a passion for building modern web applications.
+              I&apos;m a full-stack developer with a passion for building modern web applications.
               With over X years of experience in software development, I specialize in
               creating responsive, user-friendly applications using cutting-edge technologies.
             </p>
