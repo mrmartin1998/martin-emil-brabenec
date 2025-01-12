@@ -1,0 +1,85 @@
+# Production Testing Checklist
+
+## 1. Core Functionality
+- [ ] Navigation works correctly between all pages
+- [ ] Dark/light mode toggle functions properly
+- [ ] All external links open in new tabs
+- [ ] Resume download button works
+- [ ] All images load correctly
+- [ ] No 404 errors for assets (images, PDFs, etc.)
+
+## 2. Responsive Design
+- [ ] Test on mobile devices (320px - 428px)
+  - [ ] Navigation menu collapses correctly
+  - [ ] Images scale properly
+  - [ ] Text remains readable
+  - [ ] No horizontal scrolling
+- [ ] Test on tablets (768px - 1024px)
+- [ ] Test on desktop (1024px+)
+- [ ] Test on large screens (1440px+)
+
+## 3. Projects Section
+- [ ] All project cards display correctly
+- [ ] Project images load properly
+- [ ] Project links work (GitHub, Live Demo)
+- [ ] Project details modal/page opens correctly
+- [ ] Tags are displayed properly
+- [ ] Project descriptions are formatted correctly
+
+## 4. Skills Section
+- [ ] All skill categories are visible
+- [ ] Progress bars render correctly
+- [ ] Animations work smoothly
+- [ ] Skill percentages are accurate
+
+## 5. Contact Form
+- [ ] Form validation works
+- [ ] Error messages display correctly
+- [ ] Success message shows after submission
+- [ ] Email is received on the backend
+- [ ] Form fields clear after successful submission
+
+## 6. Performance
+- [ ] Page load times are acceptable (<3s)
+- [ ] Images are optimized
+- [ ] No console errors
+- [ ] Smooth scrolling and transitions
+
+## 7. Cross-Browser Testing
+- [ ] Chrome
+- [ ] Firefox
+- [ ] Safari
+- [ ] Edge
+
+## 8. Social Links
+- [ ] GitHub profile link works
+- [ ] LinkedIn profile link works
+- [ ] Email link opens mail client
+- [ ] All social icons render correctly
+
+## 9. Content
+- [ ] No spelling errors
+- [ ] No broken English
+- [ ] All links have correct URLs
+- [ ] Contact information is accurate
+- [ ] Project descriptions are complete
+
+## 10. SEO & Metadata
+- [ ] Title tags are set for all pages
+- [ ] Meta descriptions are present
+- [ ] OG tags work when shared on social media
+- [ ] robots.txt is properly configured
+- [ ] Sitemap is accessible
+
+## 11. Accessibility
+- [ ] Proper heading hierarchy
+- [ ] Alt text for all images
+- [ ] Sufficient color contrast
+- [ ] Keyboard navigation works
+- [ ] ARIA labels where needed
+
+## 12. Security
+- [ ] HTTPS is enabled
+- [ ] No exposed environment variables
+- [ ] Form has CSRF protection
+- [ ] No sensitive information in source code
