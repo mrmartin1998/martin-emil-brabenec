@@ -74,13 +74,13 @@
 - [x] Implement dark/light mode
 
 ### Backend
-- [ ] Set up MongoDB connection
-- [ ] Create API routes for:
+- [x] Set up MongoDB connection
+- [x] Create API routes for:
   - [x] Contact form
-  - [ ] Project data
-  - [ ] Skills/Tech stack
-- [ ] Implement data models
-- [ ] Add form validation
+  - [x] Project data
+  - [x] Skills/Tech stack
+- [x] Implement data models
+- [x] Add form validation
 
 ## Phase 4: Content & Features
 - [ ] Add project showcase section

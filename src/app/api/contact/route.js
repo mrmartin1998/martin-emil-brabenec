@@ -1,22 +1,49 @@
+import { NextResponse } from 'next/server';
+import connectDB from '@/lib/mongodb';
+import mongoose from 'mongoose';
+
+// Create Contact model inline since it's only used here
+const Contact = mongoose.models.Contact || mongoose.model('Contact', new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  subject: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  message: {
+    type: String,
+    required: true,
+  },
+}, {
+  timestamps: true,
+}));
+
 export async function POST(request) {
   try {
+    await connectDB();
     const body = await request.json();
     
-    // TODO: Add your email service integration here
-    // Example: SendGrid, Nodemailer, etc.
+    // Create new contact entry
+    await Contact.create(body);
     
-    // For now, we'll just log the data
+    // TODO: Add email notification service here
     console.log('Contact form submission:', body);
 
-    return new Response(JSON.stringify({ message: 'Message sent successfully' }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return NextResponse.json({ message: 'Message sent successfully' });
   } catch (error) {
     console.error('Contact form error:', error);
-    return new Response(JSON.stringify({ message: 'Failed to send message' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return NextResponse.json(
+      { message: 'Failed to send message' },
+      { status: 500 }
+    );
   }
 } 
