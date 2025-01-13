@@ -32,28 +32,28 @@ export default function AboutContent() {
     <>
       <Section className="bg-base-200 rounded-3xl">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6">About Me</h2>
+          <h2 className="text-3xl font-bold mb-8">About Me</h2>
           <div className="prose max-w-none">
             <p>
               I am a passionate full-stack developer dedicated to building efficient, scalable, and user-friendly web applications. 
               My focus lies in creating seamless digital experiences by integrating modern front-end design with robust back-end functionality.
             </p>
             
-            <h3>Front-End Expertise</h3>
+            <h3 className="text-xl font-semibold mt-8 mb-4">Front-End Expertise</h3>
             <p>
               Proficient in React.js, Next.js, and Tailwind CSS for building responsive and dynamic user interfaces. 
               Skilled in utilizing Daisy UI to streamline design workflows and ensure visually appealing user experiences. 
               Deep understanding of HTML, CSS, and JavaScript for crafting intuitive and accessible web applications.
             </p>
 
-            <h3>Back-End Strength</h3>
+            <h3 className="text-xl font-semibold mt-8 mb-4">Back-End Strength</h3>
             <p>
               Experienced in creating APIs using Next.js serverless functions, ensuring scalable and efficient back-end services. 
               Expertise in database management with MongoDB, leveraging Mongoose and MongoDB Atlas for seamless integration 
               and performance optimization. Proficient in secure authentication using JWT and developing RESTful APIs.
             </p>
 
-            <h3>Why Work With Me?</h3>
+            <h3 className="text-xl font-semibold mt-8 mb-4">Why Work With Me?</h3>
             <ul>
               <li><strong>Continuous Learner:</strong> I stay updated with the latest technologies to bring modern solutions to the table.</li>
               <li><strong>Problem Solver:</strong> I thrive on tackling complex challenges and delivering innovative results.</li>
