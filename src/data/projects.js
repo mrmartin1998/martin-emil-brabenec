@@ -32,9 +32,8 @@ export const projects = [
     ],
     category: 'web',
     links: [
-      // Note: Update these URLs with actual project links
       { label: 'Live Demo', href: 'https://e-commerce-platform.demo' },
-      { label: 'GitHub', href: 'https://github.com/username/e-commerce-platform', variant: 'outline' }
+      { label: 'GitHub', href: 'https://github.com/mrmartin1998/e-commerce-platform', variant: 'outline' }
     ],
     featured: true,
     techDetails: {
@@ -87,8 +86,8 @@ export const projects = [
     ],
     category: 'web',
     links: [
-      { label: 'Live Demo', href: 'https://budget-buddy-demo.vercel.app' },
-      { label: 'GitHub', href: 'https://github.com/yourusername/budget-buddy', variant: 'outline' }
+      { label: 'Live Demo', href: 'https://budget-buddy-delta-one.vercel.app/' },
+      { label: 'GitHub', href: 'https://github.com/mrmartin1998/budget-buddy', variant: 'outline' }
     ],
     featured: true,
     techDetails: {
@@ -132,8 +131,8 @@ export const projects = [
     ],
     category: 'web',
     links: [
-      { label: 'Live Demo', href: 'https://combat-gains.demo' },
-      { label: 'GitHub', href: 'https://github.com/username/combat-gains', variant: 'outline' }
+      { label: 'Live Demo', href: 'https://combat-gains.vercel.app/' },
+      { label: 'GitHub', href: 'https://github.com/mrmartin1998/combat-gains', variant: 'outline' }
     ],
     featured: true,
     techDetails: {
