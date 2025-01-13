@@ -13,20 +13,20 @@ export default function ContactPage() {
     {
       icon: "github",
       label: "GitHub",
-      href: "https://github.com/yourusername",
-      username: "@yourusername"
+      href: "https://github.com/mrmartin1998/",
+      username: "@mrmartin1998"
     },
     {
       icon: "linkedin",
       label: "LinkedIn",
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://www.linkedin.com/in/martin-emil-brabenec-33b818148/",
       username: "Martin Emil Brabenec"
     },
     {
       icon: "email",
       label: "Email",
-      href: "mailto:your.email@example.com",
-      username: "your.email@example.com"
+      href: "mailto:martinemilbrabenec@gmail.com",
+      username: "martinemilbrabenec@gmail.com"
     }
   ];
 
@@ -44,8 +44,8 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div>
                 <h3 className="font-semibold mb-2">Location</h3>
-                <p className="text-base-content/70">Prague, Czech Republic</p>
-                <p className="text-base-content/70">Central European Time (CET)</p>
+                <p className="text-base-content/70">Castellón, Spain</p>
+                <p className="text-base-content/70">Central European Time (CET/CEST)</p>
               </div>
 
               <div>
