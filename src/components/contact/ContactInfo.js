@@ -2,8 +2,8 @@
   <div className="card bg-base-100 shadow-xl rounded-2xl">
     <div className="card-body">
       <h2 className="text-xl font-semibold mb-4">Location</h2>
-      <p>Prague, Czech Republic</p>
-      <p>Central European Time (CET)</p>
+      <p>Castellón, Spain</p>
+      <p>Central European Time (CET/CEST)</p>
     </div>
   </div>
 
