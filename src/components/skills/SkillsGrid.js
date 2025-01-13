@@ -5,31 +5,31 @@ export default function SkillsGrid() {
     {
       category: "Frontend",
       items: [
+        { name: "Next.js", level: 90 },
         { name: "React", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "TypeScript", level: 80 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "HTML/CSS", level: 95 }
+        { name: "TailwindCSS", level: 95 },
+        { name: "DaisyUI", level: 85 },
+        { name: "TypeScript", level: 80 }
       ]
     },
     {
       category: "Backend",
       items: [
         { name: "Node.js", level: 85 },
-        { name: "Express", level: 85 },
-        { name: "MongoDB", level: 80 },
-        { name: "PostgreSQL", level: 75 },
-        { name: "REST APIs", level: 90 }
+        { name: "MongoDB", level: 85 },
+        { name: "Mongoose", level: 85 },
+        { name: "Next.js API Routes", level: 90 },
+        { name: "JWT Auth", level: 85 }
       ]
     },
     {
-      category: "Tools & Others",
+      category: "Tools & Services",
       items: [
         { name: "Git", level: 90 },
-        { name: "Docker", level: 75 },
-        { name: "AWS", level: 70 },
-        { name: "CI/CD", level: 75 },
-        { name: "Testing", level: 80 }
+        { name: "Vercel", level: 85 },
+        { name: "Stripe", level: 80 },
+        { name: "REST APIs", level: 90 },
+        { name: "ESLint", level: 85 }
       ]
     }
   ];
