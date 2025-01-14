@@ -32,7 +32,7 @@ export const projects = [
     ],
     category: 'web',
     links: [
-      { label: 'Live Demo', href: 'https://e-commerce-platform.demo' },
+      { label: 'Live Demo', href: 'https://e-commerce-platform-three.vercel.app/' },
       { label: 'GitHub', href: 'https://github.com/mrmartin1998/e-commerce-platform', variant: 'outline' }
     ],
     featured: true,
