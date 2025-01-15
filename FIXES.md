@@ -31,13 +31,13 @@
 
 ### 4. Project Description Formatting
 - **Status**: Needs Improvement
-- **Issue**: Formatting not satisfactory
+- **Issue**: Data structure needs revision for better formatting
 - **Tasks**:
-  - Review current formatting
-  - Implement new styling
-  - Ensure consistent spacing
-  - Add proper paragraph breaks
-  - Test responsiveness of new format
+  - Review data structure in projects.js
+  - Design better format for project descriptions
+  - Implement new data structure
+  - Update rendering logic
+  - Test across all project entries
 
 ## Notes
 - All items tracked from production testing on [date]
