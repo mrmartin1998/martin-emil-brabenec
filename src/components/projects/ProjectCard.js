@@ -48,6 +48,8 @@ export default function ProjectCard({
                 href={link.href}
                 variant={link.variant || 'ghost'}
                 className="text-sm"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {link.label}
               </Button>
