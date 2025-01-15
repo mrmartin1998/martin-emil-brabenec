@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { validateContact } from '@/lib/validations/contact';
+import { sendEmail } from '@/lib/email';
 
 export async function POST(request) {
   try {
@@ -14,12 +15,9 @@ export async function POST(request) {
       );
     }
 
-    // Here you would typically:
-    // 1. Save to database
-    // 2. Send email notification
-    // 3. Set up email autoresponder
-    // For now, we'll just simulate a successful response
-    
+    // Send email notification
+    await sendEmail(body);
+
     return NextResponse.json(
       { message: 'Message sent successfully' },
       { status: 200 }
