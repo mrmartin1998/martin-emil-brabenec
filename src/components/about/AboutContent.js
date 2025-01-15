@@ -4,20 +4,6 @@ import SkillsGrid from '@/components/skills/SkillsGrid';
 import ResumeButton from '@/components/ui/ResumeButton';
 
 export default function AboutContent() {
-  const skills = [
-    { 
-      category: "Frontend", 
-      items: ["Next.js", "React", "TailwindCSS", "DaisyUI", "TypeScript"] 
-    },
-    { 
-      category: "Backend", 
-      items: ["Node.js", "MongoDB", "Mongoose", "JWT Auth", "REST APIs"] 
-    },
-    { 
-      category: "Tools & Services", 
-      items: ["Git", "Vercel", "Stripe", "ESLint", "API Integration"] 
-    },
-  ];
 
   const experiences = [
     {

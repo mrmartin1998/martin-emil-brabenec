@@ -3,8 +3,8 @@ import Button from '@/components/ui/Button';
 export default function ResumeButton() {
   return (
     <Button
-      href="/resume.pdf"
-      download="martin-brabenec-resume.pdf"
+      href="/documents/martin-emil-brabenec-resume.pdf"
+      download="martin-emil-brabenec-resume.pdf"
       variant="outline"
       className="gap-2"
     >
